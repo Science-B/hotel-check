@@ -1,9 +1,17 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-const rootReducer = combineReducers({});
+import hotelsReducer from './hotelsSlice';
 
-const store = configureStore({
-	reducer: rootReducer,
+const rootReducer = combineReducers({
+	hotels: hotelsReducer,
 });
 
-export default store;
+export const setupStore = () => {
+	return configureStore({
+		reducer: rootReducer,
+	});
+};
+
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>;
+export type AppDispatch = AppStore['dispatch'];
