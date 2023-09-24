@@ -6,8 +6,12 @@ html {
 
 body {
 	background-color: var(--page-bg);
-	color: var(page-text-color);
+	color: var(--page-text-color);
 	font-family: var(--font-main);
 	font-size: var(--font-size);
 	font-weight: var(--font-weight);
+}
+
+a {
+	color: var(--page-text-color);
 }

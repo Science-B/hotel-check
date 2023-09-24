@@ -1,0 +1,21 @@
+.header {
+	padding: 32px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.name {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.btnGroup {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	transition: all 0.1s ease-in;
+
+	&:hover {
+		transform: scale(0.95);
+	}
+}
