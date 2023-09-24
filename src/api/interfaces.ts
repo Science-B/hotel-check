@@ -7,7 +7,7 @@ export interface HotelSearchParams {
 export interface HotelState {
 	hotels: Hotel[];
 	isLoading: boolean;
-	error: string;
+	error?: string;
 }
 
 export interface Hotel {
