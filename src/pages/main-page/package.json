@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"main": "main-page",
+	"typings": "main-page.tsx"
+}
