@@ -1,5 +1,7 @@
 import { useEffect } from "react"
 import { useAppDispatch, useHotels } from "./hooks/hooks"
+import { MainPage } from "./pages/main-page"
+
 import { loadHotelsList } from "./redux/hotelsSlice"
 
 
@@ -11,6 +13,6 @@ dispatch(loadHotelsList({city: 'Moscow', checkIn: '2023-09-24', checkOut: '2023-
 	},[])
 	console.log('hotels', hotels)
 	return (
-		<h1>Hotel Check</h1>
+		<MainPage/>
 	)
 }

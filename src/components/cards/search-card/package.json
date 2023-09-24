@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"main": "search-card",
+	"typings": "search-card.tsx"
+}
