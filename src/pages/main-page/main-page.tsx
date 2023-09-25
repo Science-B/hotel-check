@@ -9,8 +9,6 @@ export function MainPage(): JSX.Element {
 		<div>
 			<Header/>
 			<div>
-			<FavoritesCard/>
-			<SearchCard/>
 			<HotelsCard/>
 		</div>
 		</div>

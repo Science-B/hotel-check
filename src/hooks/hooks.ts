@@ -10,3 +10,8 @@ export const useHotels = (): Hotel[] => {
 	const { hotels } = useAppSelector((state) => state.hotels);
 	return hotels;
 };
+
+export const useSliders = (): string[] => {
+	const { sliders } = useAppSelector((state) => state.sliders);
+	return sliders;
+};

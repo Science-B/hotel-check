@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import hotelsReducer from './hotelsSlice';
+import slidersReducer from './slidersSlice';
 
 const rootReducer = combineReducers({
 	hotels: hotelsReducer,
+	sliders: slidersReducer,
 });
 
 export const setupStore = () => {
