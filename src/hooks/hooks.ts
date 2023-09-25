@@ -15,3 +15,8 @@ export const useSliders = (): string[] => {
 	const { sliders } = useAppSelector((state) => state.sliders);
 	return sliders;
 };
+
+export const useFavorites = (): Hotel[] => {
+	const { favorites } = useAppSelector((state) => state.favorites);
+	return favorites;
+};

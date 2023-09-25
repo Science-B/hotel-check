@@ -2,10 +2,12 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import hotelsReducer from './hotelsSlice';
 import slidersReducer from './slidersSlice';
+import favoritesReducer from './favoritesSlice';
 
 const rootReducer = combineReducers({
 	hotels: hotelsReducer,
 	sliders: slidersReducer,
+	favorites: favoritesReducer,
 });
 
 export const setupStore = () => {

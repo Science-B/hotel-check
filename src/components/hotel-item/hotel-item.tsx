@@ -1,3 +1,6 @@
+import { useAppDispatch } from "../../hooks/hooks";
+import { toggleFavorites } from "../../redux/favoritesSlice";
+
 import { generateRate } from "../../utils/generateRate";
 import { formatPrice } from "../../utils/formatPrice";
 
@@ -11,13 +14,14 @@ import goldenStar from '../../icons/goldenStar.svg'
 import emptyStar from '../../icons/emptyStar.svg'
 
 
+
 interface HotelsListProps {
 	hotel: Hotel;
 }
 
 export function HotelItem(props: HotelsListProps): JSX.Element {
 	const { hotel } = props
-	console.log('Hotel from HotelsList', hotel)
+	const dispatch = useAppDispatch()
 	return (
 		<div className={s.wrap}>
 			<div className={s.logo}>
@@ -38,7 +42,7 @@ export function HotelItem(props: HotelsListProps): JSX.Element {
 					</div>
 				</div>
 				<div className={s.priceGroup}>
-					<div className={s.heart}></div>
+					<div onClick={()=> dispatch(toggleFavorites(hotel))} className={s.heart}></div>
 					<div className={s.price}>Price: <span>{formatPrice(hotel.priceFrom)} ₽</span></div>
 				</div>
 			</div>
