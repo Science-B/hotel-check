@@ -49,3 +49,15 @@ export interface slidersState {
 export interface FavoritesState {
 	favorites: Hotel[];
 }
+
+export interface SearchParamsState {
+	city: string;
+	checkIn: string;
+	checkOut: string;
+}
+
+export interface SearchParams {
+	city: string;
+	checkIn: string;
+	checkOut: string;
+}
