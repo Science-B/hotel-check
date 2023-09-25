@@ -1,7 +1,7 @@
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 import { AppDispatch, RootState } from '../redux/store';
 
-import { Hotel } from '../api/interfaces';
+import { Hotel, SearchParams } from '../api/interfaces';
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
@@ -19,4 +19,9 @@ export const useSliders = (): string[] => {
 export const useFavorites = (): Hotel[] => {
 	const { favorites } = useAppSelector((state) => state.favorites);
 	return favorites;
+};
+
+export const useParams = (): SearchParams => {
+	const searchParams = useAppSelector((state) => state.searchParams);
+	return searchParams;
 };
