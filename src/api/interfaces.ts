@@ -45,3 +45,7 @@ interface PricePercentile {
 export interface slidersState {
 	sliders: string[];
 }
+
+export interface FavoritesState {
+	favorites: Hotel[];
+}
