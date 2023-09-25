@@ -41,3 +41,7 @@ interface PricePercentile {
 	'75': number;
 	'99': number;
 }
+
+export interface slidersState {
+	sliders: string[];
+}

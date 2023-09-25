@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"main": "hotel-item",
+	"typings": "hotel-item.tsx"
+}

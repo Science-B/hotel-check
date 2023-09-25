@@ -1,0 +1,47 @@
+.card {
+	max-width: 600px;
+	background-color: var(--page-bg);
+	border-radius: 16px;
+}
+
+.container {
+	padding: 48px 32px 0px 32px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 28px;
+
+	span {
+		font-size: 24px;
+		font-weight: 400;
+	}
+}
+
+.group {
+	display: flex;
+	gap: 20px;
+
+	p {
+		font-size: 32px;
+		font-weight: 500;
+	}
+}
+
+.slider {
+	margin-bottom: 28px;
+}
+
+.favorites {
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 129%;
+	letter-spacing: -0.408px;
+	margin-bottom: 12px;
+
+	span {
+		font-weight: 500;
+	}
+}
