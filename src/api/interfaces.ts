@@ -1,9 +1,3 @@
-export interface HotelSearchParams {
-	city: string;
-	checkIn: string;
-	checkOut: string;
-}
-
 export interface HotelState {
 	hotels: Hotel[];
 	isLoading: boolean;
@@ -56,7 +50,7 @@ export interface SearchParamsState {
 	checkOut: string;
 }
 
-export interface SearchParams {
+export interface HotelSearchParams {
 	city: string;
 	checkIn: string;
 	checkOut: string;

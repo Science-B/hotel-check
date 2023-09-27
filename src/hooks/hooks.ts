@@ -1,7 +1,7 @@
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 import { AppDispatch, RootState } from '../redux/store';
 
-import { Hotel, SearchParams } from '../api/interfaces';
+import { Hotel, HotelSearchParams } from '../api/interfaces';
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
@@ -21,7 +21,7 @@ export const useFavorites = (): Hotel[] => {
 	return favorites;
 };
 
-export const useParams = (): SearchParams => {
+export const useHotelsSearchParams = (): HotelSearchParams => {
 	const searchParams = useAppSelector((state) => state.searchParams);
 	return searchParams;
 };

@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-import { SearchParamsState, SearchParams } from '../api/interfaces';
+import { HotelSearchParams, SearchParamsState } from '../api/interfaces';
 import { formatDate } from '../utils/formatDate';
 
 const initialState: SearchParamsState = {
@@ -13,7 +13,10 @@ const searchParamsSlice = createSlice({
 	name: 'searchParams',
 	initialState: initialState,
 	reducers: {
-		searchParamasUpdated: (state, action: PayloadAction<SearchParams>) => {
+		searchParamasUpdated: (
+			state,
+			action: PayloadAction<HotelSearchParams>,
+		) => {
 			state.city = action.payload.city;
 			state.checkIn = action.payload.checkIn;
 			state.checkOut = action.payload.checkOut;
