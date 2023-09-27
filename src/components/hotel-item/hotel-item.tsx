@@ -1,8 +1,9 @@
-import { useAppDispatch } from "../../hooks/hooks";
+import { useAppDispatch, useHotelsSearchParams } from "../../hooks/hooks";
 import { toggleFavorites } from "../../redux/favoritesSlice";
 
 import { generateRate } from "../../utils/generateRate";
 import { formatPrice } from "../../utils/formatPrice";
+import { transformDate } from "../../utils/transformDate";
 
 import { Hotel } from "../../api/interfaces";
 
@@ -21,6 +22,7 @@ interface HotelsListProps {
 
 export function HotelItem(props: HotelsListProps): JSX.Element {
 	const { hotel } = props
+	const searchParmas = useHotelsSearchParams()
 	const dispatch = useAppDispatch()
 	return (
 		<div className={s.wrap}>
@@ -33,9 +35,9 @@ export function HotelItem(props: HotelsListProps): JSX.Element {
 						{hotel.hotelName}
 					</h2>
 					<div className={s.dates}>
-						<p>data</p>
+						<p>{transformDate(searchParmas.checkIn)}</p>
 						<img src={dash} alt="dash" />
-						<p>data</p>
+						<p>{transformDate(searchParmas.checkOut)}</p>
 					</div>
 					<div className={s.rating}>
 						{generateRate(hotel.stars).map((el: boolean) =>el === true ? <img src={goldenStar} /> : <img src={emptyStar} />)}

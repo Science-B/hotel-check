@@ -1,0 +1,64 @@
+.card {
+	min-width: 360px;
+	background-color: var(--page-bg);
+	border-radius: 32px;
+}
+
+.container {
+	padding: 32px;
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	label {
+		color: var(--page-text-color);
+		font-weight: 500;
+	}
+
+	input {
+		border-radius: 4px;
+		border: 1px solid #c9cacc;
+		padding: 15px;
+		margin-bottom: 16px;
+
+		&::placeholder {
+			color: var(--page-text-color);
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 125%;
+		}
+	}
+
+	button {
+		color: #fff;
+		margin-top: 16px;
+		padding: 15px;
+		border-radius: 4px;
+		background: linear-gradient(104deg, #41522e -15.34%, #be8022 145.95%);
+		box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+
+		&:hover {
+			cursor: pointer;
+			background: linear-gradient(
+					0deg,
+					rgba(255, 255, 255, 0.2) 0%,
+					rgba(255, 255, 255, 0.2) 100%
+				),
+				linear-gradient(104deg, #41522e -15.34%, #be8022 145.95%);
+		}
+
+		&:active {
+			cursor: pointer;
+			border-radius: 4px;
+			background: linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.2) 0%,
+					rgba(0, 0, 0, 0.2) 100%
+				),
+				linear-gradient(104deg, #41522e -15.34%, #be8022 145.95%);
+		}
+	}
+}

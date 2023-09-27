@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { useAppDispatch, useHotels } from "../../../hooks/hooks"
+import { useAppDispatch, useHotelsSearchParams } from "../../../hooks/hooks"
 import { HotelsList } from "../../hotels-list/hotels-list";
 
 import { loadHotelsList } from "../../../redux/hotelsSlice";
@@ -8,14 +8,15 @@ import s from "./hotels-card.module.scss";
 
 import ArrowIcon from '../../../icons/arrow.svg'
 import { Slider } from "../../slider/slider";
+import  {transformDate}  from "../../../utils/transformDate";
 
 export function HotelsCard(): JSX.Element {
 	const dispatch = useAppDispatch()
-	const hotels = useHotels()
+	const searchParams = useHotelsSearchParams()
 
 	useEffect(() => {
-		dispatch(loadHotelsList({city: 'Чикаго', checkIn: '2023-09-25', checkOut: '2023-09-30'}))
-	},[])
+		dispatch(loadHotelsList(searchParams))
+	},[searchParams])
 	
 	return (
 		<div className={s.card}>
@@ -24,13 +25,13 @@ export function HotelsCard(): JSX.Element {
 				<div className={s.group}>
 					<p>Отели</p>
 					<img src={ArrowIcon} alt="arrow-icon" />
-					<p>fetchParams.city</p>
+					<p>{searchParams.city}</p>
 				</div> 
-				<span>fetchParams.checkIn</span>
+				<span>{transformDate(searchParams.checkIn)}</span>
 			</div>
 			<div className={s.slider}><Slider/></div>
 			<p className={s.favorites}>Добавлено в избранное: <span>favorites.length</span> отеля</p>
-			<HotelsList hotels={hotels}/>
+			<HotelsList />
 			</div>
 		</div>
 	);
