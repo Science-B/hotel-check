@@ -3,6 +3,16 @@
 	align-items: center;
 	gap: 24px;
 	padding: 16px 16px 16px 0px;
+
+	&.isFav {
+		.logo {
+			display: none;
+		}
+
+		.name {
+			max-width: 210px;
+		}
+	}
 }
 
 .logo {
@@ -22,6 +32,9 @@
 
 .info {
 	width: 100%;
+}
+
+.nameGroup {
 	display: flex;
 	justify-content: space-between;
 }
@@ -45,15 +58,14 @@
 	letter-spacing: -0.408px;
 }
 
+.rateGroup {
+	display: flex;
+	justify-content: space-between;
+}
+
 .rating {
 	display: flex;
 	gap: 2px;
-}
-
-.priceGroup {
-	display: flex;
-	flex-direction: column;
-	gap: 22px;
 }
 
 .heart {
@@ -61,7 +73,6 @@
 	height: 20px;
 	background-image: url('../../icons/heart.svg');
 	background-repeat: no-repeat;
-	margin-left: auto;
 
 	&:hover {
 		cursor: pointer;
@@ -71,6 +82,15 @@
 	&:active {
 		cursor: pointer;
 		background-image: url('../../icons/heartActive.svg');
+	}
+
+	&.favorited {
+		background-image: url('../../icons/heartActive.svg');
+
+		&:active {
+			cursor: pointer;
+			background-image: url('../../icons/heart.svg');
+		}
 	}
 }
 

@@ -55,3 +55,8 @@ export interface HotelSearchParams {
 	checkIn: string;
 	checkOut: string;
 }
+
+export interface FavoritesHotelsSortingState {
+	sortByRating: string | null;
+	sortByPrice: string | null;
+}
