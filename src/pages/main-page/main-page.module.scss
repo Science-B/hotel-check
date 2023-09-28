@@ -1,15 +1,36 @@
-.wrap {
-	max-width: 1014px;
+.container {
+	max-width: 1074px;
 	padding: 0px 15px;
+	margin: 0 auto;
+}
+
+.content {
 	display: flex;
 	justify-content: space-between;
+
+	@media screen and (max-width: 1080px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 	// flex-direction: column;
-	margin: 0 auto;
-	gap: 24px;
+	// justify-content: center;
+	// align-items: center;
 }
 
 .column {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 25px;
+
+	@media screen and (max-width: 1080px) {
+		width: 100%;
+		margin-bottom: 25px;
+	}
+}
+
+.hotelsCard {
+	@media screen and (max-width: 1080px) {
+		width: 100%;
+	}
 }

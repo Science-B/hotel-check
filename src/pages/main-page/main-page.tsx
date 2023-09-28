@@ -6,17 +6,22 @@ import { Header } from '../../components/header/header';
 import s from './main-page.module.scss'
 
 export function MainPage(): JSX.Element {
-	return (
-		<>
-			<Header/>
-			<div className={s.wrap}>
-				<div className={s.column}>
-				<SearchCard/>
-				<FavoritesCard/>
-				</div>
-			<HotelsCard/>
-		</div>
-		</>
-		
-	);
+  return (
+    <>
+      <Header/>
+      <div className={s.container}>
+        <div className={s.content}>
+          <div className={s.column}>
+            <SearchCard/>
+            <FavoritesCard/>
+          </div>
+          <div className={s.hotelsCard}>
+            <HotelsCard/>
+          </div>
+        </div>
+        
+      </div>    
+    </>
+    
+  );
 }

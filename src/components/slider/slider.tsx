@@ -1,28 +1,15 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useSliders } from '../../hooks/hooks';
-import s from './slider.module.scss';
 import 'swiper/css';
+
+import s from './slider.module.scss'
 
 export function Slider(): JSX.Element {
   const sliders = useSliders();
-
-  // Определите массив breakpoints для настройки slidesPerView
-  const breakpoints = {
-	320: {
-		slidesPerView: 1.5, 
-		},
-	640: {
-		slidesPerView: 3.5,
-		},
-	768: {
-		slidesPerView: 3.5,
-		},
-  };
-
   return (
-    <Swiper spaceBetween={12} slidesPerView={3.5} breakpoints={breakpoints}>
+    <Swiper className={s.swiper} spaceBetween={12} slidesPerView={'auto'} >
       {sliders.map((slider) => (
-        <SwiperSlide key={slider}>
+        <SwiperSlide className={s.slide} key={slider}>
           <div>
             <img src={slider} alt={`Slider ${slider}`} />
           </div>
