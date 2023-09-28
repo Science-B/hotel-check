@@ -1,17 +1,19 @@
-import { useHotels } from "../../hooks/hooks";
 import { HotelItem } from "../hotel-item";
 
 import { Hotel } from "../../api/interfaces";
 
-import s from './hotels-list.module.scss'
+interface HotelsListProps {
+	hotels: Hotel[];
+	isFav: boolean;
+}
 
-export function HotelsList(): JSX.Element {
-	const hotels = useHotels()
+export function HotelsList(props: HotelsListProps): JSX.Element {
+	const { hotels, isFav } = props;
 	return (
-		<div className={s.wrap}>
+		<>
 			{hotels.map((hotel: Hotel) => (
-				<HotelItem key={hotel.hotelId} hotel={hotel}/>
+				<HotelItem key={hotel.hotelId} hotel={hotel} isFav={isFav}/>
 			))}
-		</div>
+		</>
 	);
 }
