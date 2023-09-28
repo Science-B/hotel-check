@@ -24,6 +24,10 @@
 	min-height: 64px;
 	background-color: rgba(65, 82, 46, 0.05);
 
+	@media screen and (max-width: 515px) {
+		display: none;
+	}
+
 	img {
 		min-width: 35px;
 		min-height: 35px;

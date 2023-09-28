@@ -2,6 +2,10 @@
 	min-width: 360px;
 	background-color: var(--page-bg);
 	border-radius: 32px;
+
+	@media screen and (max-width: 1080px) {
+		min-width: unset;
+	}
 }
 
 .container {
