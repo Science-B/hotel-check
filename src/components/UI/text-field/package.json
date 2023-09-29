@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"main": "text-field",
+	"typings": "text-field.tsx"
+}
