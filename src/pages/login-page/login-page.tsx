@@ -15,7 +15,7 @@ export function LoginPage(): JSX.Element {
 			<div className={s.content}>
 			<h2 className={s.title}>Simple Hotel Check</h2>
 			<form className={s.form} onSubmit={handleSubmit}>
-				<TextField label='Логин' type='text' id='login' name='login' placeholderText='Введите логин' value={formData.login} onChange={handleInputChange}/>
+				<TextField label='Логин' id='login' name='login' placeholderText='Введите логин' value={formData.login} onChange={handleInputChange}/>
 				<TextField label='Пароль' type='password' id='password' name='password' placeholderText='Введите пароль' value={formData.password} onChange={handleInputChange}/>
 				<FormButton text='Войти'/>
 			</form>

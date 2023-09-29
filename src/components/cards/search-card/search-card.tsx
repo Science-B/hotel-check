@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import { useAppDispatch, useHotelsSearchParams } from '../../../hooks/hooks';
+import { TextField } from '../../UI/text-field';
+import { FormButton } from '../../UI/form-button';
 
 import { searchParamasUpdated } from '../../../redux/searchParamsSlice';
 
@@ -22,31 +24,33 @@ export function SearchCard(): JSX.Element {
 		<div className={s.card}>
 			<div className={s.container}>
 				<form onSubmit={handleSubmit} className={s.form} >
-					<label htmlFor="location">Локация</label>
-					<input 
-					type="text"
-					id="city"
-					name="city"
-					placeholder="Выберите город"
+					<TextField 
+					label='Локация' 
+					id='city' 
+					name='city' 
+					placeholderText='Выберерите город' 
 					value={formData.city}
 					onChange={handleInputChange}/>
-					<label htmlFor="checkIn">Дата заселения</label>
-					<input 
-					type="date"
-					id="checkIn"
-					name="checkIn"
-					placeholder="Дата заселения"
-					value={formData.checkIn}
+					
+					<TextField
+					label='Дата заселения' 
+					type='date' 
+					id='checkIn' 
+					name='checkIn' 
+					placeholderText='Дата заселения'
+					value={formData.checkIn} 
 					onChange={handleInputChange}/>
-					<label htmlFor="checkOut">Дата выселения</label>
-					<input 
-					type="date"
-					id="checkOut"
-					name="checkOut"
-					placeholder="Дата выселения"
-					value={formData.checkOut}
+
+					<TextField 
+					label='Дата выселения' 
+					type='date' 
+					id='checkOut' 
+					name='checkOut' 
+					placeholderText='Дата выселения' 
+					value={formData.checkOut} 
 					onChange={handleInputChange}/>
-					<button >Найти</button>
+					
+					<FormButton text='Найти'/>
 				</form>
 			</div>
 		</div>
