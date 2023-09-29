@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"main": "form-button",
+	"typings": "form-button.tsx"
+}
