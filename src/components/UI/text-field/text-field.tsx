@@ -4,7 +4,7 @@ import s from './text-field.module.scss'
 
 interface TextFieldProps {
   label: string;
-  type: string;
+  type?: string;
   id: string;
   name: string;
   placeholderText: string;
@@ -13,7 +13,7 @@ interface TextFieldProps {
 }
 
 export function TextField(props:TextFieldProps) {
-  const { label, type, id, name, placeholderText, value, onChange} = props;
+  const { label, type = 'text', id, name, placeholderText, value, onChange} = props;
 
   return (
     <>
