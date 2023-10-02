@@ -4,12 +4,14 @@ import hotelsReducer from './hotelsSlice';
 import slidersReducer from './slidersSlice';
 import favoritesReducer from './favoritesSlice';
 import searchParamsReducer from './searchParamsSlice';
+import userReducer from './userSlice';
 
 const rootReducer = combineReducers({
 	hotels: hotelsReducer,
 	sliders: slidersReducer,
 	favorites: favoritesReducer,
 	searchParams: searchParamsReducer,
+	user: userReducer,
 });
 
 export const setupStore = () => {

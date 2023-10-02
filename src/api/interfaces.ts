@@ -60,3 +60,13 @@ export interface FavoritesHotelsSortingState {
 	sortByRating: string | null;
 	sortByPrice: string | null;
 }
+
+export interface UserState {
+	login: string;
+	password: string;
+}
+
+export interface User {
+	login: string;
+	password: string;
+}

@@ -2,10 +2,18 @@ import React, {useState} from 'react';
 import { TextField } from '../../components/UI/text-field';
 import { FormButton } from '../../components/UI/form-button';
 
+import { useAppDispatch } from '../../hooks/hooks';
+
+import { User } from '../../api/interfaces';
+import { userLogIn } from '../../redux/userSlice';
+
 import s from './login-page.module.scss'
 
 export function LoginPage(): JSX.Element {
-	const [formData, setFormData] = useState<any>({
+
+	const dispatch = useAppDispatch()
+
+	const [formData, setFormData] = useState<User>({
 		login: '',
 		password: '',
 		});
@@ -34,6 +42,8 @@ export function LoginPage(): JSX.Element {
 
 function handleSubmit(e: React.FormEvent<HTMLFormElement>): void {
 	e.preventDefault()
+	dispatch(userLogIn(formData))
 	console.log('formData', formData)
+
 }
 }
