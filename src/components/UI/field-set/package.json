@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"main": "field-set",
+	"typings": "field-set.tsx"
+}

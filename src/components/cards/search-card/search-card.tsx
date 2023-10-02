@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useAppDispatch, useHotelsSearchParams } from '../../../hooks/hooks';
-import { TextField } from '../../UI/text-field';
+import { FieldSet } from '../../UI/field-set';
 import { FormButton } from '../../UI/form-button';
 
 import { searchParamasUpdated } from '../../../redux/searchParamsSlice';
@@ -24,7 +24,7 @@ export function SearchCard(): JSX.Element {
 		<div className={s.card}>
 			<div className={s.container}>
 				<form onSubmit={handleSubmit} className={s.form} >
-					<TextField 
+					<FieldSet 
 					label='Локация' 
 					id='city' 
 					name='city' 
@@ -32,7 +32,7 @@ export function SearchCard(): JSX.Element {
 					value={formData.city}
 					onChange={handleInputChange}/>
 					
-					<TextField
+					<FieldSet
 					label='Дата заселения' 
 					type='date' 
 					id='checkIn' 
@@ -41,7 +41,7 @@ export function SearchCard(): JSX.Element {
 					value={formData.checkIn} 
 					onChange={handleInputChange}/>
 
-					<TextField 
+					<FieldSet 
 					label='Дата выселения' 
 					type='date' 
 					id='checkOut' 
@@ -49,7 +49,6 @@ export function SearchCard(): JSX.Element {
 					placeholderText='Дата выселения' 
 					value={formData.checkOut} 
 					onChange={handleInputChange}/>
-					
 					<FormButton text='Найти'/>
 				</form>
 			</div>
