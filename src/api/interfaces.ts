@@ -36,7 +36,7 @@ interface PricePercentile {
 	'99': number;
 }
 
-export interface slidersState {
+export interface SlidersState {
 	sliders: string[];
 }
 
