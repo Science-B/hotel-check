@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { TextField } from '../../components/UI/text-field';
 import { FormButton } from '../../components/UI/form-button';
 
+import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../hooks/hooks';
 
 import { User } from '../../api/interfaces';
@@ -10,13 +11,13 @@ import { userLogIn } from '../../redux/userSlice';
 import s from './login-page.module.scss'
 
 export function LoginPage(): JSX.Element {
-
+	const navigate = useNavigate()
 	const dispatch = useAppDispatch()
-
 	const [formData, setFormData] = useState<User>({
 		login: '',
 		password: '',
 		});
+		
   return (
 	<div className={s.loginPage}>
 			<div className={s.card}>
@@ -43,6 +44,7 @@ export function LoginPage(): JSX.Element {
 function handleSubmit(e: React.FormEvent<HTMLFormElement>): void {
 	e.preventDefault()
 	dispatch(userLogIn(formData))
+	navigate("/", { replace: true });
 	console.log('formData', formData)
 
 }

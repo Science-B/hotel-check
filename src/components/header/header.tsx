@@ -1,8 +1,14 @@
+import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../hooks/hooks";
+import { userLogOut } from "../../redux/userSlice";
+
 import s from "./header.module.scss";
 
 import logOutIcon from '../../icons/logOut.svg'
 
 export function Header(): JSX.Element {
+	const navigate = useNavigate()
+	const dispatch = useAppDispatch()
 	return (
 		<div className={s.header}>
 		<div className={s.name}>Simple Hotel Check</div>
@@ -14,6 +20,7 @@ export function Header(): JSX.Element {
 	);
 
 	function handleExit(): void {
-		console.log('exit')
+		navigate("/login", { replace: true });
+		dispatch(userLogOut())
 	}
 }
