@@ -1,0 +1,49 @@
+.fieldset {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	&.error {
+		.label {
+			color: #eb1717;
+		}
+
+		.input {
+			border: 1px solid #eb1717;
+		}
+
+		p {
+			color: #eb1717;
+			position: absolute;
+			bottom: -5px;
+			font-size: 12px;
+			font-weight: 300;
+
+			@media screen and (max-width: 450px) {
+				margin-top: -15px;
+				position: relative;
+			}
+		}
+	}
+}
+
+.label {
+	color: var(--page-text-color);
+	font-weight: 500;
+	margin-bottom: 7px;
+}
+
+.input {
+	position: relative;
+	border-radius: 4px;
+	border: 1px solid #c9cacc;
+	padding: 15px;
+	margin-bottom: 16px;
+
+	&::placeholder {
+		color: var(--page-text-color);
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 125%;
+	}
+}

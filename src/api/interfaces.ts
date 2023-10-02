@@ -70,3 +70,8 @@ export interface User {
 	login: string;
 	password: string;
 }
+
+export interface FormErrors {
+	login?: string;
+	password?: string;
+}

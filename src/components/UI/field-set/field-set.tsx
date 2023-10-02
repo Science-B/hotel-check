@@ -1,6 +1,7 @@
 import React from 'react';
+import classNames from 'classnames';
 
-import s from './text-field.module.scss'
+import s from './field-set.module.scss'
 
 interface TextFieldProps {
   label: string;
@@ -10,13 +11,14 @@ interface TextFieldProps {
   placeholderText: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
 }
 
-export function TextField(props:TextFieldProps) {
-  const { label, type = 'text', id, name, placeholderText, value, onChange} = props;
+export function FieldSet(props:TextFieldProps) {
+  const { label, type = 'text', id, name, placeholderText, value, onChange, error} = props;
 
   return (
-    <>
+    <fieldset className={classNames(s.fieldset, error ? s.error : '')}>
       <label className={s.label} htmlFor={id}>{label}</label>
       <input className={s.input}
         type={type}
@@ -25,8 +27,9 @@ export function TextField(props:TextFieldProps) {
         placeholder={placeholderText}
         value={value}
         onChange={onChange}
-      />  
-    </>
+      /> 
+       <p>{error}</p>
+    </fieldset>
   );
 
 
