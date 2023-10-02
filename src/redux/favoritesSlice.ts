@@ -10,7 +10,7 @@ const favoritesSlice = createSlice({
 	name: 'favorites',
 	initialState: initialState,
 	reducers: {
-		toggleFavorites: (state, action: PayloadAction<Hotel>) => {
+		toggleFavorites: (state, action: PayloadAction<Hotel>): void => {
 			const isExists: boolean = state.favorites.some(
 				(f: Hotel) => f.hotelId === action.payload.hotelId,
 			);

@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { slidersState } from '../api/interfaces';
+import { SlidersState } from '../api/interfaces';
 
-const initialState: slidersState = {
+const initialState: SlidersState = {
 	sliders: [
 		'/src/icons/slider1.png',
 		'/src/icons/slider2.png',

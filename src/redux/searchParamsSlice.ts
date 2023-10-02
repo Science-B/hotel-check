@@ -16,7 +16,7 @@ const searchParamsSlice = createSlice({
 		searchParamasUpdated: (
 			state,
 			action: PayloadAction<HotelSearchParams>,
-		) => {
+		): void => {
 			state.city = action.payload.city;
 			state.checkIn = action.payload.checkIn;
 			state.checkOut = action.payload.checkOut;
