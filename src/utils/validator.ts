@@ -29,6 +29,11 @@ export function validator(
 				statusValidate = !cyrillicRegExp.test(data);
 				break;
 			}
+			case 'specials': {
+				const specialsErgExp = /^[а-яА-ЯёЁa-zA-Z]*$/;
+				statusValidate = !specialsErgExp.test(data);
+				break;
+			}
 		}
 
 		if (statusValidate) return config.message;
