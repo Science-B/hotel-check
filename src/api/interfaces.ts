@@ -71,7 +71,13 @@ export interface User {
 	password: string;
 }
 
-export interface FormErrors {
+export interface LoginFormErrors {
 	login?: string;
 	password?: string;
+}
+
+export interface SearchFormErrors {
+	city?: string;
+	checkIn?: string;
+	checkOut?: string;
 }

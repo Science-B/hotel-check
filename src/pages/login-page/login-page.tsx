@@ -5,7 +5,7 @@ import { useAppDispatch } from '../../hooks/hooks';
 import { FieldSet } from '../../components/UI/field-set';
 import { FormButton } from '../../components/UI/form-button';
 
-import { User, FormErrors } from '../../api/interfaces';
+import { User, LoginFormErrors } from '../../api/interfaces';
 import { userLogIn } from '../../redux/userSlice';
 
 import { validator } from '../../utils/validator';
@@ -19,7 +19,7 @@ export function LoginPage(): JSX.Element {
 		login: '',
 		password: '',
 		});
-	const [errors, setErrors] = useState<FormErrors>({
+	const [errors, setErrors] = useState<LoginFormErrors>({
 		login: '',
 		password: '',
 	});	
