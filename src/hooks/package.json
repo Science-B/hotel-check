@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"main": "hooks",
+	"typings": "hooks.ts"
+}

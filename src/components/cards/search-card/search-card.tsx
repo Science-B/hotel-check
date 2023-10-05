@@ -1,17 +1,17 @@
 import React, {useState, useEffect} from 'react';
-import { useAppDispatch, useHotelsSearchParams } from '../../../hooks/hooks';
+import { useAppDispatch, useHotelsSearchParams } from '../../../hooks';
 import { FieldSet } from '../../UI/field-set';
 import { FormButton } from '../../UI/form-button';
+import { SideCard } from '../../UI/side-card';
 
 import { searchParamasUpdated } from '../../../redux/searchParamsSlice';
 
+import { validator } from '../../../utils/validator';
+import { getCurrentDate } from '../../../utils/getCurrentDate';
+
 import { HotelSearchParams, SearchFormErrors  } from '../../../api/interfaces';
 
-import { validator } from '../../../utils/validator';
-
 import s from './search-card.module.scss'
-import { getCurrentDate } from '../../../utils/getCurrentDate';
-import { SideCard } from '../../UI/side-card';
 
 export function SearchCard(): JSX.Element {
     const initialFormData = useHotelsSearchParams();

@@ -1,14 +1,10 @@
-
-import s from './form-button.module.scss'
+import React from 'react';
+import s from './form-button.module.scss';
 
 interface FormButtonProps {
-text: string;
+  text: string;
 }
 
-export function FormButton(props: FormButtonProps) {
-  const { text } = props;
-  
-  return (
-     <button className={s.button} >{text}</button>
-  );
-  }
+export function FormButton({ text }: FormButtonProps) {
+  return <button className={s.button}>{text}</button>;
+}

@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from '../../hooks/hooks';
-
+import { useAppDispatch } from '../../hooks';
 import { FieldSet } from '../../components/UI/field-set';
 import { FormButton } from '../../components/UI/form-button';
 
-import { User, LoginFormErrors } from '../../api/interfaces';
 import { userLogIn } from '../../redux/userSlice';
 
 import { validator } from '../../utils/validator';
+
+import { User, LoginFormErrors } from '../../api/interfaces';
 
 import s from './login-page.module.scss'
 

@@ -1,5 +1,6 @@
+import React from 'react';
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../hooks/hooks";
+import { useAppDispatch } from "../../hooks";
 import { userLogOut } from "../../redux/userSlice";
 
 import s from "./header.module.scss";
