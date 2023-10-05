@@ -12,6 +12,7 @@ import upIcon from '../../../icons/up.svg';
 import upGrayIcon from '../../../icons/up-gray.svg';
 import downIcon from '../../../icons/down.svg';
 import downGrayIcon from '../../../icons/down-gray.svg';
+import { SideCard } from '../../UI/side-card/side-card';
 
 export function FavoritesCard(): JSX.Element {
 	const dispatch = useAppDispatch()
@@ -19,7 +20,6 @@ export function FavoritesCard(): JSX.Element {
     sortByRating: 'asc',
     sortByPrice: null,
   });
-
   const favoritesHotels = useFavorites();
   const sortedHotels = [...favoritesHotels].sort((a, b) => {
     if (sortingState.sortByRating === 'asc') {
@@ -35,9 +35,8 @@ export function FavoritesCard(): JSX.Element {
   });
 
   return (
-    <div className={s.card}>
-      <div className={s.container}>
-        <div className={s.content}>
+    <SideCard>
+ <div className={s.content}>
           <h2 className={s.title}>Избранное</h2>
           <div className={s.btnGroup}>
             <div className={s.sortGroup}>
@@ -72,8 +71,9 @@ export function FavoritesCard(): JSX.Element {
             )}
           </div>
         </div>
-      </div>
-    </div>
+     
+    </SideCard>
+       
   );
 
   function toggleSortByRating(): void {

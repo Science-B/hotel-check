@@ -6,16 +6,15 @@
 
 .content {
 	display: flex;
+	max-height: 902px;
 	justify-content: space-between;
 
 	@media screen and (max-width: 1080px) {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		max-height: unset;
 	}
-	// flex-direction: column;
-	// justify-content: center;
-	// align-items: center;
 }
 
 .column {
