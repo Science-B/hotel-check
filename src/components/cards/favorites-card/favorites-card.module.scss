@@ -3,6 +3,10 @@
 	font-size: 24px;
 	font-weight: 500;
 	margin-bottom: 32px;
+
+	@media screen and (max-width: 450px) {
+		font-size: 16px;
+	}
 }
 
 .btnGroup {
@@ -14,6 +18,10 @@
 	line-height: 143%;
 	letter-spacing: -0.408px;
 	margin-bottom: 32px;
+
+	@media screen and (max-width: 450px) {
+		font-size: 12px;
+	}
 }
 
 .clearBtn {
@@ -82,4 +90,8 @@
 
 .emptyList {
 	text-align: center;
+
+	@media screen and (max-width: 450px) {
+		font-size: 12px;
+	}
 }

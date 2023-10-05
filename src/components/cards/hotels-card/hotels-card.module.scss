@@ -1,12 +1,11 @@
 .card {
-	max-width: 664px;
+	width: 664px;
 	height: 100%;
 	background-color: var(--page-bg);
 	border-radius: 16px;
 
 	@media screen and (max-width: 1080px) {
-		max-width: unset;
-		max-height: unset;
+		width: unset;
 	}
 }
 
@@ -37,6 +36,10 @@
 	p {
 		font-size: 32px;
 		font-weight: 500;
+
+		@media screen and (max-width: 450px) {
+			font-size: 24px;
+		}
 	}
 }
 
@@ -45,14 +48,13 @@
 }
 
 .favorites {
-	font-size: 17px;
 	font-weight: 300;
 	line-height: 129%;
 	letter-spacing: -0.408px;
 	margin-bottom: 12px;
 
-	span {
-		font-weight: 500;
+	@media screen and (max-width: 450px) {
+		font-size: 14px;
 	}
 }
 
