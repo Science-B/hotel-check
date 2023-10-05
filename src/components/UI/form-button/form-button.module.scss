@@ -26,4 +26,8 @@
 			),
 			linear-gradient(104deg, #41522e -15.34%, #be8022 145.95%);
 	}
+
+	@media screen and (max-width: 450px) {
+		font-size: 14px;
+	}
 }

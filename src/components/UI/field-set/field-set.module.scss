@@ -31,6 +31,11 @@
 	color: var(--page-text-color);
 	font-weight: 500;
 	margin-bottom: 7px;
+
+	@media screen and (max-width: 400px) {
+		font-size: 14px;
+		font-weight: 400;
+	}
 }
 
 .input {
@@ -40,10 +45,18 @@
 	padding: 15px;
 	margin-bottom: 16px;
 
+	@media screen and (max-width: 400px) {
+		font-size: 12px;
+	}
+
 	&::placeholder {
 		color: var(--page-text-color);
 		font-size: 16px;
 		font-weight: 300;
 		line-height: 125%;
+
+		@media screen and (max-width: 400px) {
+			font-size: 12px;
+		}
 	}
 }
