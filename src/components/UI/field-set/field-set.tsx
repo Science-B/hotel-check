@@ -33,6 +33,4 @@ export function FieldSet(props:FieldSetProps) {
        <p>{error}</p>
     </fieldset>
   );
-
-
   }

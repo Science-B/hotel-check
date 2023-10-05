@@ -1,6 +1,6 @@
+import React from 'react';
 import classNames from "classnames";
-
-import { useAppDispatch, useFavorites, useHotelsSearchParams } from "../../hooks/hooks";
+import { useAppDispatch, useFavorites, useHotelsSearchParams } from "../../hooks";
 import { toggleFavorites } from "../../redux/favoritesSlice";
 
 import { generateRate } from "../../utils/generateRate";
@@ -15,8 +15,6 @@ import logo from '../../icons/logo.svg'
 import dash from '../../icons/dash.svg'
 import goldenStar from '../../icons/goldenStar.svg'
 import emptyStar from '../../icons/emptyStar.svg'
-
-
 
 interface HotelsListProps {
 	hotel: Hotel;
@@ -56,6 +54,5 @@ export function HotelItem(props: HotelsListProps): JSX.Element {
 				</div>
 			</div>
 			</div>
-			
 	);
 }

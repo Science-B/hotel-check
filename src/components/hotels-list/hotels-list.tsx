@@ -1,6 +1,9 @@
+import React from 'react';
 import { HotelItem } from "../hotel-item";
 
 import { Hotel } from "../../api/interfaces";
+
+import s from './hotels-list.module.scss'
 
 interface HotelsListProps {
 	hotels: Hotel[];
@@ -10,10 +13,10 @@ interface HotelsListProps {
 export function HotelsList(props: HotelsListProps): JSX.Element {
 	const { hotels, isFav } = props;
 	return (
-		<>
-			{hotels.map((hotel: Hotel) => (
+		<> 
+			{ hotels.length ? hotels.map((hotel: Hotel) => (
 				<HotelItem key={hotel.hotelId} hotel={hotel} isFav={isFav}/>
-			))}
+			)) : <p className={s.emptyList}>Нет результатов по Вашему запросу</p>}
 		</>
 	);
 }
