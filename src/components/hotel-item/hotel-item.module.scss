@@ -1,3 +1,8 @@
+.card {
+	display: flex;
+	flex-direction: column;
+}
+
 .wrap {
 	display: flex;
 	align-items: center;
@@ -128,4 +133,9 @@
 			font-size: 14px;
 		}
 	}
+}
+.underline {
+	background-color: gainsboro;
+	width: 95%;
+	height: 1px;
 }

@@ -28,6 +28,7 @@ export function HotelItem(props: HotelsListProps): JSX.Element {
 	const favoritesHotels = useFavorites()
 	const isExists = favoritesHotels.some(favHotel => favHotel.hotelId === hotel.hotelId)
 	return (
+		<div className={s.card}>
 		<div className={classNames(s.wrap, isFav ? s.isFav : '')}>
 			<div className={s.logo}>
 				<img src={logo} alt="logo" />
@@ -53,6 +54,8 @@ export function HotelItem(props: HotelsListProps): JSX.Element {
 					</div>
 				</div>
 			</div>
-			</div>
+		</div>
+			<hr className={s.underline} />
+		</div>
 	);
 }

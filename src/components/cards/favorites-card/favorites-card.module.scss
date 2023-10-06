@@ -69,9 +69,12 @@
 	}
 }
 
+.content {
+	min-height: 215px;
+}
+
 .favoritesHotels {
 	max-height: 215px;
-	min-height: 215px;
 	overflow: hidden;
 	overflow-y: scroll;
 
