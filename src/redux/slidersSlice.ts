@@ -4,12 +4,12 @@ import { SlidersState } from '../api/interfaces';
 
 const initialState: SlidersState = {
 	sliders: [
-		'/src/icons/slider1.png',
-		'/src/icons/slider2.png',
-		'/src/icons/slider3.png',
-		'/src/icons/slider4.png',
-		'/src/icons/slider5.png',
-		'/src/icons/slider6.png',
+		'./assets/slider1.png',
+		'./assets/slider2.png',
+		'./assets/slider3.png',
+		'./assets/slider4.png',
+		'./assets/slider5.png',
+		'./assets/slider6.png',
 	],
 };
 
