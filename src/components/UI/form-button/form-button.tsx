@@ -1,4 +1,3 @@
-import React from 'react';
 import s from './form-button.module.scss';
 
 interface FormButtonProps {

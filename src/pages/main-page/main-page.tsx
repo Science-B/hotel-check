@@ -1,4 +1,3 @@
-import React from 'react';
 import { SearchCard } from '../../components/cards/search-card';
 import { HotelsCard } from '../../components/cards/hotels-card';
 import { FavoritesCard } from '../../components/cards/favorites-card';

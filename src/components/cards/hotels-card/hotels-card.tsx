@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useAppDispatch, useFavorites, useHotels, useHotelsSearchParams } from "../../../hooks";
 import { HotelsList } from "../../hotels-list/hotels-list";
 import { Slider } from "../../slider";
