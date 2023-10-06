@@ -63,12 +63,14 @@ export function FavoritesCard(): JSX.Element {
                     </div>
                     <div onClick={clearAllFavorites} className={s.clearBtn}>Очистить</div>
                 </div>
-                <div className={s.favoritesHotels}>
-                    {sortedHotels.length === 0 ? (
-                        <p className={s.emptyList}>Список избранного пуст</p>
-                    ) : (
-                        <HotelsList hotels={sortedHotels} isFav={true} />
-                    )}
+                <div className={s.content}>
+                    <div className={s.favoritesHotels}>
+                        {sortedHotels.length === 0 ? (
+                         <p className={s.emptyList}>Список избранного пуст</p>
+                        ) : (
+                            <HotelsList hotels={sortedHotels} isFav={true} />
+                     )}
+                    </div>
                 </div>
             </div>
         </SideCard>
