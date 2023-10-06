@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useAppDispatch, useFavorites } from '../../../hooks';
 import { HotelsList } from '../../hotels-list';
 import { SideCard } from '../../UI/side-card';
