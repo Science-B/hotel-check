@@ -1,4 +1,3 @@
-import React from 'react';
 import classNames from "classnames";
 import { useAppDispatch, useFavorites, useHotelsSearchParams } from "../../hooks";
 import { toggleFavorites } from "../../redux/favoritesSlice";

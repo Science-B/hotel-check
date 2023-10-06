@@ -1,4 +1,3 @@
-import React from 'react';
 import { HotelItem } from "../hotel-item";
 
 import { Hotel } from "../../api/interfaces";
