@@ -26,7 +26,15 @@
 	transform: translate(-50%, -50%);
 
 	@media screen and (max-width: 450px) {
-		min-width: unset;
+		min-width: 360px;
+	}
+
+	@media screen and (max-width: 380px) {
+		min-width: 320px;
+	}
+
+	@media screen and (max-width: 330px) {
+		min-width: 300px;
 	}
 }
 

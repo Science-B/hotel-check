@@ -30,7 +30,7 @@ export function validator(
 				break;
 			}
 			case 'specials': {
-				const specialsErgExp = /^[а-яА-ЯёЁa-zA-Z]*$/;
+				const specialsErgExp = /^[а-яА-ЯёЁa-zA-Z ]*$/;
 				statusValidate = !specialsErgExp.test(data);
 				break;
 			}
